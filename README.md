@@ -1,2 +1,9 @@
-# microservices-gateway-example
-Simple microservices + gateway example using ASP.NET Core 3.1 and Ocelot
+# Microservices and API Gateway Example
+
+Simple microservices + api gateway example
+
+## Technologies 
+- Asp.net Core 3.1
+- Microservices architecture
+- Ocelot
+
