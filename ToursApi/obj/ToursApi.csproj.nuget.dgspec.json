@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davut\\Desktop\\Tourism-Microservice-Example\\ToursApi\\ToursApi.csproj": {}
+    "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davut\\Desktop\\Tourism-Microservice-Example\\ToursApi\\ToursApi.csproj": {
+    "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davut\\Desktop\\Tourism-Microservice-Example\\ToursApi\\ToursApi.csproj",
+        "projectUniqueName": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj",
         "projectName": "ToursApi",
-        "projectPath": "C:\\Users\\davut\\Desktop\\Tourism-Microservice-Example\\ToursApi\\ToursApi.csproj",
+        "projectPath": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj",
         "packagesPath": "C:\\Users\\davut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davut\\Desktop\\Tourism-Microservice-Example\\ToursApi\\obj\\",
+        "outputPath": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\davut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -37,6 +37,28 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
+          "dependencies": {
+            "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Design": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Microsoft.EntityFrameworkCore.Tools": {
+              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
+              "suppressParent": "All",
+              "target": "Package",
+              "version": "[3.1.9, )"
+            },
+            "Npgsql.EntityFrameworkCore.PostgreSQL": {
+              "target": "Package",
+              "version": "[3.1.4, )"
+            }
+          },
           "imports": [
             "net461",
             "net462",
@@ -55,7 +77,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.302\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.403\\RuntimeIdentifierGraph.json"
         }
       }
     }
