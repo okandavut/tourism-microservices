@@ -13,6 +13,8 @@ using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
 using Microsoft.EntityFrameworkCore.Design;
 using ToursApi.Data;
+using Elastic.Apm.AspNetCore;
+using Elastic.Apm.NetCoreAll;
 
 namespace ToursApi
 {
@@ -41,6 +43,8 @@ namespace ToursApi
             {
                 app.UseDeveloperExceptionPage();
             }
+
+            app.UseAllElasticApm(Configuration);
 
             app.UseHttpsRedirection();
 

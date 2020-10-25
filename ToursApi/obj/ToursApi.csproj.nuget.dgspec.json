@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj": {}
+    "C:\\Users\\davut\\Desktop\\tourism-microservices\\ToursApi\\ToursApi.csproj": {}
   },
   "projects": {
-    "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj": {
+    "C:\\Users\\davut\\Desktop\\tourism-microservices\\ToursApi\\ToursApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj",
+        "projectUniqueName": "C:\\Users\\davut\\Desktop\\tourism-microservices\\ToursApi\\ToursApi.csproj",
         "projectName": "ToursApi",
-        "projectPath": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\ToursApi.csproj",
+        "projectPath": "C:\\Users\\davut\\Desktop\\tourism-microservices\\ToursApi\\ToursApi.csproj",
         "packagesPath": "C:\\Users\\davut\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\davut\\Desktop\\microservices-gateway-example\\ToursApi\\obj\\",
+        "outputPath": "C:\\Users\\davut\\Desktop\\tourism-microservices\\ToursApi\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
           "C:\\Users\\davut\\AppData\\Roaming\\NuGet\\NuGet.Config",
@@ -38,6 +38,10 @@
       "frameworks": {
         "netcoreapp3.1": {
           "dependencies": {
+            "Elastic.Apm.NetCoreAll": {
+              "target": "Package",
+              "version": "[1.6.1, )"
+            },
             "Microsoft.AspNetCore.Identity.EntityFrameworkCore": {
               "target": "Package",
               "version": "[3.1.9, )"
