@@ -1,8 +1,0 @@
-{
-  "runtimeOptions": {
-    "additionalProbingPaths": [
-      "C:\\Users\\davut\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\davut\\.nuget\\packages"
-    ]
-  }
-}
