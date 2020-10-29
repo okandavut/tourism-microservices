@@ -14,6 +14,7 @@ namespace ToursApi.Data
 
         }
         public virtual DbSet<ToursEntity> Tours { get; set; }
+        public virtual DbSet<SoldToursEntity> SoldTours { get; set; }
 
     }
 }

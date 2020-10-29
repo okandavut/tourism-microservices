@@ -15,5 +15,6 @@ namespace ToursApi.Data.Entities
         public DateTime EndDate{ get; set; }
         public decimal Price { get; set; }
         public int Count{ get; set; }
+
     }
 }
