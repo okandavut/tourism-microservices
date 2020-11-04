@@ -2,18 +2,33 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Net;
 using System.Threading.Tasks;
+using ToursApi.Services;
 
 namespace ToursApi.Controllers
 {
     [ApiController]
-    [Route("[controller]")]
-       public class ToursController : ControllerBase
+    [Route("Tours")]
+    public class ToursController : ControllerBase
     {
-        [HttpGet]
-        public ActionResult<IEnumerable<string>> Get()
+        private readonly ITourService _tourService;
+
+        public ToursController(ITourService tourService)
         {
-            return new string[] { "Tour 1", "Tour 2 " };
+            _tourService = tourService;
+        }
+
+        [HttpGet]
+        public async Task<IActionResult> GetTours()
+        {
+            var response = await _tourService.GetToursAsync();
+            if (response == null)
+            {
+                return BadRequest();
+            }
+
+            return StatusCode((int)HttpStatusCode.OK, response);
         }
     }
 }

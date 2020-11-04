@@ -15,6 +15,8 @@ using Microsoft.EntityFrameworkCore.Design;
 using ToursApi.Data;
 using Elastic.Apm.AspNetCore;
 using Elastic.Apm.NetCoreAll;
+using ToursApi.Services;
+using ToursApi.Repository.Implementations;
 
 namespace ToursApi
 {
@@ -32,6 +34,9 @@ namespace ToursApi
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<ITourService, TourService>();
+            services.AddScoped<ITourRepository, TourRepository>();
 
             services.AddControllers();
         }
