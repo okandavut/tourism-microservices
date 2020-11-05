@@ -8,6 +8,6 @@ namespace ToursApi.Models
 {
     public class GetToursResponse
     {
-        public IEnumerable<ToursEntity> Tours;
+        public IEnumerable<ToursEntity> Tours { get; set; }  
     }
 }

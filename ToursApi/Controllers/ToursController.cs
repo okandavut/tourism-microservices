@@ -23,7 +23,7 @@ namespace ToursApi.Controllers
         public async Task<IActionResult> GetTours()
         {
             var response = await _tourService.GetToursAsync();
-            if (response == null)
+            if (response == null)                       
             {
                 return BadRequest();
             }
