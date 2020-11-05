@@ -15,6 +15,10 @@ using Microsoft.EntityFrameworkCore.Design;
 using ToursApi.Data;
 using Elastic.Apm.AspNetCore;
 using Elastic.Apm.NetCoreAll;
+using ToursApi.Services;
+using ToursApi.Repository.Implementations;
+using ToursApi.Models;
+using ToursApi.Controllers;
 
 namespace ToursApi
 {
@@ -25,13 +29,16 @@ namespace ToursApi
             Configuration = configuration;
         }
 
-        public IConfiguration Configuration { get; }
+        public IConfiguration Configuration { get; }    
 
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddDbContext<ApplicationDbContext>(options =>
                 options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<ITourService,TourService>();
+            services.AddScoped  <ITourRepository, TourRepository>();
 
             services.AddControllers();
         }
