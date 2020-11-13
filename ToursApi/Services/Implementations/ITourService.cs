@@ -9,5 +9,7 @@ namespace ToursApi.Services
     public interface ITourService
     {
         Task<GetToursResponse> GetToursAsync();
+        Task<AddTourResponse> AddToursAsync(AddTourRequest request);
+        Task<GetTourByIdResponse> GetTourByIdAsync(GetTourByIdRequest request);
     }
 }
