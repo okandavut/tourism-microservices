@@ -19,9 +19,28 @@ namespace ToursApi.Repository.Implementations
             _dbContext = dbContext;
         }
 
+        public async Task<bool> SaveAsync()
+        {
+            try
+            {
+                await _dbContext.SaveChangesAsync();
+                return true;
+            }
+            catch
+            {
+                return false;
+            }
+        }
+
         public async Task<IEnumerable<ToursEntity>> GetToursAsync()
         {
             return await _dbContext.Tours.ToListAsync();
+        }
+
+        public async Task<bool> AddToursAsync(ToursEntity entity)
+        {
+            await _dbContext.Tours.AddAsync(entity);
+            return await SaveAsync();
         }
     }
 }

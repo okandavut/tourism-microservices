@@ -9,5 +9,6 @@ namespace ToursApi.Repository.Implementations
     public interface ITourRepository
     {
         Task<IEnumerable<ToursEntity>> GetToursAsync();
+        Task<bool> AddToursAsync(ToursEntity entity);
     }
 }
