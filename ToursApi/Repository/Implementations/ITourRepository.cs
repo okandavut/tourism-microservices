@@ -10,5 +10,6 @@ namespace ToursApi.Repository.Implementations
     {
         Task<IEnumerable<ToursEntity>> GetToursAsync();
         Task<bool> AddToursAsync(ToursEntity entity);
+        Task<ToursEntity> GetTourByIdAsync(int Id);
     }
 }

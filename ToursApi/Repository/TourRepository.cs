@@ -42,5 +42,11 @@ namespace ToursApi.Repository.Implementations
             await _dbContext.Tours.AddAsync(entity);
             return await SaveAsync();
         }
+
+        public async Task<ToursEntity> GetTourByIdAsync(int Id)
+        {
+            return await _dbContext.Tours.FindAsync(Id);
+        }
+
     }
 }

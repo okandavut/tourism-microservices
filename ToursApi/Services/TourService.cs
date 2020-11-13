@@ -37,6 +37,7 @@ namespace ToursApi.Services
                 Count = request.Count
             };
             bool status = await _tourRepository.AddToursAsync(entity);
+
             if (status)
             {
                 response.StatusCode = (int)HttpStatusCode.Created;
@@ -46,6 +47,13 @@ namespace ToursApi.Services
                 response.StatusCode = (int)HttpStatusCode.BadRequest;
             }
             
+            return response;
+        }
+
+        public async Task<GetTourByIdResponse> GetTourByIdAsync(GetTourByIdRequest request)
+        {
+            var response = new GetTourByIdResponse();
+            response.Tour = await _tourRepository.GetTourByIdAsync(request.Id);
             return response;
         }
     }

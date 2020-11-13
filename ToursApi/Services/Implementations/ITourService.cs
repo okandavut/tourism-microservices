@@ -10,5 +10,6 @@ namespace ToursApi.Services
     {
         Task<GetToursResponse> GetToursAsync();
         Task<AddTourResponse> AddToursAsync(AddTourRequest request);
+        Task<GetTourByIdResponse> GetTourByIdAsync(GetTourByIdRequest request);
     }
 }
