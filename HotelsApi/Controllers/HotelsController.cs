@@ -32,7 +32,7 @@ namespace HotelsApi.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
-        [HttpGet]
+        [HttpPost,Route("AddHotel")]
         public async Task<IActionResult> AddHotel([FromBody] AddHotelRequest request)
         {
             var response = await _hotelService.AddHotelsAsync(request);

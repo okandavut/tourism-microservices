@@ -12,6 +12,32 @@
       "UpstreamPathTemplate": "/hotels"
     },
     {
+      "DownstreamPathTemplate": "/hotels/AddHotel",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/hotels/add",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/hotels/hotelbyid",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/hotels/getbyid",
+      "UpstreamHttpMethod": [ "GET" ]
+    },
+
+
+    {
       "DownstreamPathTemplate": "/tours",
       "DownstreamScheme": "http",
       "DownstreamHostAndPorts": [
@@ -21,7 +47,32 @@
         }
       ],
       "UpstreamPathTemplate": "/tours"
+    },
+    {
+      "DownstreamPathTemplate": "/tours/AddTour",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/tours/add",
+      "UpstreamHttpMethod": [ "POST" ]
+    },
+    {
+      "DownstreamPathTemplate": "/tours/hotelbyid",
+      "DownstreamScheme": "http",
+      "DownstreamHostAndPorts": [
+        {
+          "Host": "localhost",
+          "Port": 7002
+        }
+      ],
+      "UpstreamPathTemplate": "/tours/getbyid",
+      "UpstreamHttpMethod": [ "GET" ]
     }
+
   ],
   "GlobalConfiguration": {
     "BaseUrl": "http://localhost:7000"

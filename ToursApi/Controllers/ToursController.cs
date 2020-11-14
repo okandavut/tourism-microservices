@@ -32,7 +32,7 @@ namespace ToursApi.Controllers
             return StatusCode(response.StatusCode, response);
         }
 
-        [HttpGet]
+        [HttpPost, Route("AddTour")]
         public async Task<IActionResult> AddTours([FromBody] AddTourRequest request)
         {
             var response = await _tourService.AddToursAsync(request);
