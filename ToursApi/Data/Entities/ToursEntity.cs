@@ -1,4 +1,4 @@
-﻿using Otiport.API.Data;
+﻿using ToursApi.API.Data;
 using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;

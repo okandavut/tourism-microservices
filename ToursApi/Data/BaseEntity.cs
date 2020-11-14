@@ -1,7 +1,7 @@
 ﻿using System;
 using System.ComponentModel.DataAnnotations;
 
-namespace Otiport.API.Data
+namespace ToursApi.API.Data
 {
     public class BaseEntity<TProperty> where TProperty : struct
     {
