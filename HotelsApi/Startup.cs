@@ -10,6 +10,11 @@ using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
 using Microsoft.Extensions.Logging;
+using HotelsApi.Data;
+using Microsoft.EntityFrameworkCore;
+using HotelsApi.Services;
+using HotelsApi.Repository.Implementations;
+using Elastic.Apm.NetCoreAll;
 
 namespace HotelsApi
 {
@@ -25,6 +30,12 @@ namespace HotelsApi
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddDbContext<ApplicationDbContext>(options =>
+                options.UseNpgsql(Configuration.GetConnectionString("DefaultConnection")));
+
+            services.AddScoped<IHotelService, HotelService>();
+            services.AddScoped<IHotelRepository, HotelRepository>();
+
             services.AddControllers();
         }
 
@@ -37,6 +48,8 @@ namespace HotelsApi
             }
 
             app.UseHttpsRedirection();
+
+            app.UseAllElasticApm(Configuration);
 
             app.UseRouting();
 
