@@ -15,7 +15,7 @@
 This project developed for learning how is the ASP .NET Core Microservices and Ocelot working. Project has two ASP .NET Core Microservice and one API Gateway which is working with Ocelot. Also includes the ElasticSearch for log requests and responses.
 
 ## Structure
-- Api-gateway (.NET Core 3.1 Project and Ocelot)
+- Api-gateway (.NET Core 3.1 Project with Ocelot)
 - Hotels Api (.NET Core 3.1 Project)
 - Tours Api (.NET Core 3.1 Project)
 
