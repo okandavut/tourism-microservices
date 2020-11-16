@@ -41,6 +41,7 @@ If there's anything you'd like to chat about, please feel free send me dm on [Tw
 - Clone the projects
 - Download PostgreSQL and create ToursDb and HotelsDb (check appsettings.json for db and user informations.)
 - Open with Visual Studio or launch with <b>"dotnet run"</b>
+- Need to add reviewer to author before pr merge.
 
 ## Contributors
 
